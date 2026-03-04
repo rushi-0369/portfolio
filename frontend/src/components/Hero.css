@@ -1,0 +1,109 @@
+.hero-section {
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  transition: all 0.4s ease;
+}
+
+.dark {
+  background: #000;
+  color: #fff;
+}
+
+.light {
+  background: #fff;
+  color: #000;
+}
+
+.hero-container {
+  max-width: 900px;
+  width: 40%;
+}
+
+.hero-intro {
+  display: inline-flex;
+  gap: 8px;
+  font-family: monospace;
+}
+
+.hero-name {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+}
+
+.hero-role {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.terminal {
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: monospace;
+  text-align: left;
+  transition: all 0.4s ease;
+}
+
+.hero-section.dark .terminal {
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+
+.hero-section.light .terminal {
+  background: #f5f5f5;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+  opacity: 0.4;
+}
+
+.terminal-body {
+  display: flex;
+  gap: 8px;
+}
+
+.prompt {
+  opacity: 0.6;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+.down{
+    margin-top: 4rem;
+}
+
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

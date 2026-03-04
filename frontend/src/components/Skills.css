@@ -1,0 +1,113 @@
+.skills-section{
+  padding: 100px 20px;
+  position: relative;
+}
+
+.section-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+
+.section-card{
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 18px 16px;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.section-card:hover{
+  transform: scale(1.05);
+}
+
+.dark .section-card{
+  border-color: rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.5); 
+}
+
+.dark .section-card:hover{
+  background: white;
+  border-color: white;
+}
+
+.light .section-card{
+  border-color: rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.5);
+}
+
+.light .section-card:hover{
+  background: black;
+  border-color: black;
+}
+
+.section-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+}
+
+.section-icon{
+  width: 40px;
+  height: 40px;
+  transition: color 0.3s ease;
+
+}
+
+.dark .section-icon{
+  color: white;
+}
+
+.dark .section-card:hover .section-icon{
+  color: black;
+}
+
+.light .section-icon{
+  color: black;
+}
+
+.light .section-card:hover .section-icon{
+  color:white;
+}
+
+.section-name{
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.light .section-name{
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.light .section-card:hover .section-name {
+  color: white;
+}
+
+.dark .section-name{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dark .section-card:hover .section-name {
+  color: black;
+}
+
+.section-container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
