@@ -1,10 +1,122 @@
-import React from 'react'
+import React from "react";
 
-const Projects = ({darkMode, projectsRef}) => {
+const Projects = ({ darkMode, projectsRef }) => {
   return (
-      <section ref={projectsRef} className={`projects-section h-screen ${darkMode ? "dark" : "light"}`}>
-      </section>
-  )
-}
+    <section
+      ref={projectsRef}
+      className={`projects-section ${darkMode ? "dark" : "light"}`}
+    >
+      <div className="section-container">
+        <div className="section-header">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+            />
+          </svg>
+          <h1 className="section-title">Projects</h1>
+        </div>
+        <div className="project-grid">
+          <div className="project-card">
+            <div className="project-card-header">
+              <div className="project-title-row">
+                <h3 className="project-title">
+                  SmartPrep AI: Adaptive Exam Assistant
+                </h3>
+                <svg className="star"></svg>
+              </div>
+              <span className="featured">Personal Project</span>
+            </div>
+            <p className="description">
+              Built an adaptive learning and testing platform with user
+              authentication, personalised test recommendation, performance
+              tracking, and a dynamic question bank.
+            </p>
+            <div className="project-link">
+              <div className="keywords">
+                <span className="keyword">ReactJS</span>
+                <span className="keyword">Tailwind CSS</span>
+                <span className="keyword">Vite</span>
+                <span className="keyword">MongoDB</span>
+                <span className="keyword">API Int.</span>
+              </div>
+              <a href="" target="_blank" className="link">
+                <span className="view-code">View Code</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-external-link w-4 h-4"
+                >
+                  <path d="M15 3h6v6"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div className="project-card">
+            <div className="project-card-header">
+              <div className="project-title-row">
+                <h3 className="project-title">
+                  Sahayak: Enhance your productivity through AI
+                </h3>
+                <svg className="star"></svg>
+              </div>
+              <span className="featured">Academic Project</span>
+            </div>
+            <p className="description">
+              Dev an AI-driven productivity assistant that analyses user
+              routines, detects inefficiencies, and provides personalised
+              recommendations to enhance daily productivity.
+            </p>
+            <div className="project-link">
+              <div className="keywords">
+                <span className="keyword">ReactJS</span>
+                <span className="keyword">Tailwind CSS</span>
+                <span className="keyword">Vite</span>
+                <span className="keyword">MongoDB</span>
+                <span className="keyword">API Int.</span>
+              </div>
+              <a href="" target="_blank" className="link">
+                <span className="view-code">View Code</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-external-link w-4 h-4"
+                >
+                  <path d="M15 3h6v6"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default Projects
+export default Projects;

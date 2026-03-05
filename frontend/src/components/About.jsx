@@ -4,7 +4,7 @@ const About = ({ darkMode, aboutRef }) => {
   return (
     <section
       ref={aboutRef}
-      className={`about-section h-screen ${darkMode ? "dark" : "light"}`}
+      className={`about-section ${darkMode ? "dark" : "light"}`}
     >
       <div className="section-container">
         <div className="section-header">

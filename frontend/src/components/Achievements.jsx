@@ -5,7 +5,7 @@ const Achievements = ({  darkMode,
   return (
       <section
         ref={achievementsRef}
-        className={`achievements-section h-screen ${darkMode ? "dark" : "light"}`}
+        className={`achievements-section ${darkMode ? "dark" : "light"}`}
       >
       </section>
   )
