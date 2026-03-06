@@ -57,7 +57,11 @@ const Projects = ({ darkMode, projectsRef }) => {
                 <span className="keyword">Tailwind CSS</span>
                 <span className="keyword">API Int.</span>
               </div>
-              <a href="https://github.com/rushi-0369/smartprep-ai" target="_blank" className="link">
+              <a
+                href="https://github.com/rushi-0369/smartprep-ai"
+                target="_blank"
+                className="link"
+              >
                 <span className="view-code">View Code</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
