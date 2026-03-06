@@ -29,23 +29,32 @@ const Projects = ({ darkMode, projectsRef }) => {
             <div className="project-card-header">
               <div className="project-title-row">
                 <h3 className="project-title">
-                  SmartPrep AI: Adaptive Exam Assistant
+                  SmartPrep AI – AI-Powered Adaptive Learning Platform
                 </h3>
                 <svg className="star"></svg>
               </div>
-              <span className="featured">Personal Project</span>
+              <span className="featured">Academic Project</span>
             </div>
             <p className="description">
-              Built an adaptive learning and testing platform with user
-              authentication, personalised test recommendation, performance
-              tracking, and a dynamic question bank.
+              Developed a full-stack AI-powered Learning Management System (LMS)
+              enabling students to enroll in courses, take tests, and track
+              learning progress. Implemented adaptive testing and AI-generated
+              feedback to identify weak areas and provide personalized learning
+              suggestions. Built responsive frontend using React and Tailwind
+              CSS with secure authentication and course management features.
+              Developed scalable backend APIs using Node.js, Express, and
+              MongoDB for course data, user management, and performance
+              analytics. Integrated AI modules to generate explanations,
+              summaries, and personalized revision content based on test
+              results.
             </p>
             <div className="project-link">
               <div className="keywords">
-                <span className="keyword">ReactJS</span>
-                <span className="keyword">Tailwind CSS</span>
-                <span className="keyword">Vite</span>
+                <span className="keyword">React.js</span>
+                <span className="keyword">Node.js</span>
+                <span className="keyword">Express.js</span>
                 <span className="keyword">MongoDB</span>
+                <span className="keyword">Tailwind CSS</span>
                 <span className="keyword">API Int.</span>
               </div>
               <a href="" target="_blank" className="link">
@@ -97,7 +106,11 @@ const Projects = ({ darkMode, projectsRef }) => {
                 <span className="keyword">TMDB API</span>
                 <span className="keyword">Vercel</span>
               </div>
-              <a href="https://github.com/rushi-0369/streamflix/" target="_blank" className="link">
+              <a
+                href="https://github.com/rushi-0369/streamflix/"
+                target="_blank"
+                className="link"
+              >
                 <span className="view-code">View Code</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
