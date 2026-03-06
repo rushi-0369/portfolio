@@ -73,26 +73,31 @@ const Projects = ({ darkMode, projectsRef }) => {
             <div className="project-card-header">
               <div className="project-title-row">
                 <h3 className="project-title">
-                  Sahayak: Enhance your productivity through AI
+                  StreamFlix - Netflixstyle Movie Streaming Web App
                 </h3>
                 <svg className="star"></svg>
               </div>
-              <span className="featured">Academic Project</span>
+              <span className="featured">Personal Project</span>
             </div>
             <p className="description">
-              Dev an AI-driven productivity assistant that analyses user
-              routines, detects inefficiencies, and provides personalised
-              recommendations to enhance daily productivity.
+              Built a responsive Netflix-like movie browsing application using
+              React and Vite. Integrated TMDB API to dynamically fetch and
+              display Popular, Now Playing, Top Rated, and Upcoming movies.
+              Implemented movie trailer playback, category-based browsing, and
+              smooth UI navigation. Designed a modern responsive UI using CSS
+              for seamless viewing across devices. Deployed the application on
+              Vercel with environment variable management.
             </p>
             <div className="project-link">
               <div className="keywords">
-                <span className="keyword">ReactJS</span>
-                <span className="keyword">Tailwind CSS</span>
+                <span className="keyword">React</span>
                 <span className="keyword">Vite</span>
-                <span className="keyword">MongoDB</span>
-                <span className="keyword">API Int.</span>
+                <span className="keyword">JavaScript</span>
+                <span className="keyword">CSS</span>
+                <span className="keyword">TMDB API</span>
+                <span className="keyword">Vercel</span>
               </div>
-              <a href="" target="_blank" className="link">
+              <a href="https://github.com/rushi-0369/streamflix/" target="_blank" className="link">
                 <span className="view-code">View Code</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
