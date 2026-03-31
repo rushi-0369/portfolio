@@ -12,8 +12,8 @@
 
 .section-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 
 

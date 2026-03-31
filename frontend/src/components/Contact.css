@@ -1,0 +1,244 @@
+.contact-section * {
+  font-family: "Geist", sans-serif;
+}
+
+.contact-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact-form-wrapper {
+  border-radius: 0.5rem;
+  padding: 32px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.contact-section.dark .contact-form-wrapper {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.contact-section.light .contact-form-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form {
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  margin-block-end: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: small;
+  font: 500;
+  margin-bottom: 8px;
+}
+
+.contact-section.dark .form-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-section.light .form-label {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  resize: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-section.dark .form-textarea {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: black;
+  color: white;
+}
+
+.contact-section.dark .form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-section.dark .form-textarea:focus {
+  border-color: white;
+}
+.contact-section.light .form-textarea {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: white;
+  color: black;
+}
+
+.contact-section.light .form-textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.contact-section.light .form-textarea:focus {
+  border-color: black;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-section.dark .form-input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.contact-section.dark .form-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-section.dark .form-input:focus {
+  border-color: #ffffff;
+}
+
+.contact-section.light .form-input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.contact-section.light .form-input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.contact-section.light .form-input:focus {
+  border-color: #000000;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  font: 500;
+  cursor: pointer;
+}
+
+.contact-section.dark .contact-submit-btn {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+.contact-section.dark .contact-submit-btn:hover {
+  background: white;
+  color: black;
+}
+
+.contact-section.light .contact-submit-btn {
+  border: 1px solid black;
+  background: transparent;
+  color: black;
+}
+
+.contact-section.light .contact-submit-btn:hover {
+  background: black;
+  color: white;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-section.dark .contact-subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.contact-section.light .contact-subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.contact-section.dark .contact-description {
+  line-height: 1.625;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-section.light .contact-description {
+  line-height: 1.625;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.contact-section.dark .contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.contact-section.dark .contact-link:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.contact-section.light .contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.contact-section.light .contact-link:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.contact-link-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
