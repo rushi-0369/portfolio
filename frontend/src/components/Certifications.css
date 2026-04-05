@@ -1,11 +1,96 @@
-.certifications-section.dark .certification-card:hover {
-  background: white;
-  color: black;
-  transform: translateY(-5px);
+.certifications-section * {
+  font-family: "Geist", sans-serif;
+}
+.certifications-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
 }
 
-.certifications-section.light .certification-card:hover {
-  background: black;
-  color: white;
-  transform: translateY(-5px);
+.section-container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.certification-card {
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.certifications-section.dark .certification-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.certifications-section.light .certification-card {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.certification-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.certification-provider {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.certification-link {
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.certifications-section.dark .certification-link {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.certifications-section.dark .certification-link:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.certifications-section.light .certification-link {
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+.certifications-section.light .certification-link:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.view-code {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428;
 }
