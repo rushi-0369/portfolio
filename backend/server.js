@@ -9,9 +9,7 @@ const Contact = require("./models/Contact");
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: "http://localhost:5173"
-}));
+app.use(cors());
 app.use(express.json());
 
 // DB Connection
@@ -26,6 +24,9 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false,
   },
 });
 
@@ -62,6 +63,11 @@ app.post("/contact", async (req, res) => {
     res.status(500).json({ success: false, message: "Server error" });
     console.error(error);
   }
+});
+
+
+app.get("/", (req, res) => {
+  res.send("API is running...");
 });
 
 // Start Server
