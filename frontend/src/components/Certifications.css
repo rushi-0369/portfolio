@@ -1,0 +1,11 @@
+.certifications-section.dark .certification-card:hover {
+  background: white;
+  color: black;
+  transform: translateY(-5px);
+}
+
+.certifications-section.light .certification-card:hover {
+  background: black;
+  color: white;
+  transform: translateY(-5px);
+}

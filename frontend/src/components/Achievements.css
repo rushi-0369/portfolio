@@ -1,0 +1,108 @@
+.achievements-section * {
+  font-family: "Geist", sans-serif;
+}
+.achievements-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.section-container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.achievement-card {
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.achievements-section.dark .achievement-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.achievements-section.light .achievement-card {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.achievement-tag {
+  font-size: 0.85rem;
+}
+
+.achievement-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.achievement-meta {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.achievement-points {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.achievement-link {
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.achievements-section.dark .achievement-link {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.achievements-section.dark .achievement-link:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.achievements-section.light .achievement-link {
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+.achievements-section.light .achievement-link:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.view-code {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428;
+}

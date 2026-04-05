@@ -5,7 +5,9 @@ export default function Navbar({darkMode, setDarkMode,scrollToAbout,
   scrollToSkills,
   scrollToAchievements,
   scrollToProjects,
-  scrollToContact,}) {
+  scrollToContact,
+  scrollToCertifications
+}) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -20,6 +22,7 @@ export default function Navbar({darkMode, setDarkMode,scrollToAbout,
         <li onClick={scrollToSkills}>Skills</li>
         <li onClick={scrollToProjects}>Projects</li>
         <li onClick={scrollToAchievements}>Achievements</li>
+        <li onClick={scrollToCertifications}>Certifications</li>
         <li onClick={scrollToContact}>Contact</li>
       </ul>
 
@@ -51,6 +54,7 @@ export default function Navbar({darkMode, setDarkMode,scrollToAbout,
           <p onClick={scrollToSkills}>Skills</p>
           <p onClick={scrollToProjects}>Projects</p>
           <p onClick={scrollToAchievements}>Achievements</p>
+          <p onClick={scrollToCertifications}>Certifications</p>
           <p onClick={scrollToContact}>Contact</p>
         </div>
       )}
