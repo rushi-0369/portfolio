@@ -45,10 +45,7 @@ const App = () => {
         scrollToContact={() => scrollToSection(contactRef)}
       />
 
-      <Hero
-        darkMode={darkMode}
-        contactRef={contactRef}
-      />
+      <Hero darkMode={darkMode} contactRef={contactRef} />
 
       <About darkMode={darkMode} aboutRef={aboutRef} />
 
@@ -58,10 +55,12 @@ const App = () => {
 
       <Achievements darkMode={darkMode} achievementsRef={achievementsRef} />
 
-      <Certifications darkMode={darkMode} certificationsRef={certificationsRef} />
+      <Certifications
+        darkMode={darkMode}
+        certificationsRef={certificationsRef}
+      />
 
-      <Contact darkMode={darkMode}
-        contactRef={contactRef} />
+      <Contact darkMode={darkMode} contactRef={contactRef} />
     </div>
   );
 };

@@ -37,25 +37,26 @@ const Projects = ({ darkMode, projectsRef }) => {
             </div>
             <p className="description">
               Developed a full-stack AI-powered Learning Management System (LMS)
-              enabling students to enroll in courses, take tests, and track
-              learning progress. Implemented adaptive testing and AI-generated
-              feedback to identify weak areas and provide personalized learning
-              suggestions. Built responsive frontend using React and Tailwind
-              CSS with secure authentication and course management features.
-              Developed scalable backend APIs using Node.js, Express, and
-              MongoDB for course data, user management, and performance
+              that enables students to enroll in courses, take tests, and track
+              their learning progress. Implemented adaptive testing and
+              AI-driven feedback to identify weak areas and provide personalized
+              learning recommendations. Built a responsive frontend using React
+              and Tailwind CSS with secure authentication and course management
+              features. Designed scalable backend APIs using Node.js, Express,
+              and MongoDB to handle user data, course content, and performance
               analytics. Integrated AI modules to generate explanations,
               summaries, and personalized revision content based on test
               results.
             </p>
             <div className="project-link">
               <div className="keywords">
-                <span className="keyword">React.js</span>
-                <span className="keyword">Node.js</span>
-                <span className="keyword">Express.js</span>
+                <span className="keyword">Full-Stack Development</span>
+                <span className="keyword">AI Integration</span>
+                <span className="keyword">Adaptive Learning</span>
+                <span className="keyword">REST API</span>
+                <span className="keyword">Authentication</span>
                 <span className="keyword">MongoDB</span>
-                <span className="keyword">Tailwind CSS</span>
-                <span className="keyword">API Int.</span>
+                <span className="keyword">React.js</span>
               </div>
               <a
                 href="https://github.com/rushi-0369/smartprep-ai"
@@ -93,21 +94,24 @@ const Projects = ({ darkMode, projectsRef }) => {
               <span className="featured">Personal Project</span>
             </div>
             <p className="description">
-              Built a responsive Netflix-like movie browsing application using
-              React and Vite. Integrated TMDB API to dynamically fetch and
+              Built a responsive Netflix-style movie browsing application using
+              React and Vite, allowing users to explore and discover movies
+              seamlessly. Integrated the TMDB API to dynamically fetch and
               display Popular, Now Playing, Top Rated, and Upcoming movies.
-              Implemented movie trailer playback, category-based browsing, and
-              smooth UI navigation. Designed a modern responsive UI using CSS
-              for seamless viewing across devices. Deployed the application on
-              Vercel with environment variable management.
+              Implemented features such as movie trailer playback,
+              category-based browsing, and smooth UI navigation for enhanced
+              user experience. Designed a modern, responsive interface using CSS
+              to ensure compatibility across devices. Deployed the application
+              on Vercel with proper environment variable management.
             </p>
             <div className="project-link">
               <div className="keywords">
-                <span className="keyword">React</span>
-                <span className="keyword">Vite</span>
-                <span className="keyword">JavaScript</span>
-                <span className="keyword">CSS</span>
+                <span className="keyword">React.js</span>
+                <span className="keyword">API Integration</span>
+                <span className="keyword">Responsive Design</span>
+                <span className="keyword">UI/UX</span>
                 <span className="keyword">TMDB API</span>
+                <span className="keyword">Single Page Application</span>
                 <span className="keyword">Vercel</span>
               </div>
               <a

@@ -1,21 +1,21 @@
 import { useState } from "react";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
-export default function Navbar({darkMode, setDarkMode,scrollToAbout,
+export default function Navbar({
+  darkMode,
+  setDarkMode,
+  scrollToAbout,
   scrollToSkills,
   scrollToAchievements,
   scrollToProjects,
   scrollToContact,
-  scrollToCertifications
+  scrollToCertifications,
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className={`navbar ${darkMode ? "dark" : "light"}`}>
-
-      <div className="brand">
-        &lt;/&gt; Rushi
-      </div>
+      <div className="brand">&lt;/&gt; Rushi</div>
 
       <ul className="nav-items">
         <li onClick={scrollToAbout}>About</li>
@@ -27,10 +27,7 @@ export default function Navbar({darkMode, setDarkMode,scrollToAbout,
       </ul>
 
       <div className="right-section">
-        <button
-          className="toggle-btn"
-          onClick={() => setDarkMode(!darkMode)}
-        >
+        <button className="toggle-btn" onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? (
             <SunIcon className="h-6 w-6 text-yellow-500" />
           ) : (

@@ -26,19 +26,22 @@ const About = ({ darkMode, aboutRef }) => {
         </div>
         <div className="about-content">
           <p className="about-text">
-            Hey! I'm a developer from India who loves building cool stuff with
-            code. I work with JavaScript, TypeScript, Python, and web
-            technologies to create things that people actually enjoy using.
+            I’m Rushi Venkata Karthikeya Chokkakula, a Computer Science student
+            at B V Raju Institute of Technology with a strong interest in
+            software development and problem-solving. I have a solid foundation
+            in Data Structures & Algorithms and core CS concepts, which helps me
+            build efficient and scalable solutions.
           </p>
           <p className="about-text">
-            My main thing? Making Discord bots that are fast, reliable, and
-            packed with features. Whether it's moderation tools, fun commands,
-            or custom automation—I turn ideas into bots that make communities
-            better.
+            I specialize in full-stack development using React, Node.js, and
+            MongoDB, and I enjoy creating real-world applications with clean
+            design and good user experience. I’ve also solved 150+ problems on
+            LeetCode, continuously improving my logical thinking and coding
+            skills.
           </p>
           <p className="about-text">
-            Always learning, always coding, and always excited about the next
-            project. Let's create something awesome!
+            I’m passionate about combining software engineering with AI to build
+            impactful solutions that enhance productivity and learning.
           </p>
           <div className="about">
             <div className="location">
@@ -59,7 +62,10 @@ const About = ({ darkMode, aboutRef }) => {
                 <line x1="16" y1="17" x2="8" y2="17"></line>
                 <polyline points="10 9 9 9 8 9"></polyline>
               </svg>
-              <a href="" target="_blank">
+              <a
+                href="https://drive.google.com/file/d/1w7PBA2LoNjXDGedkKHc0ox-ktt5okKb1/view?usp=sharing"
+                target="_blank"
+              >
                 Resume
               </a>
             </div>
@@ -110,10 +116,7 @@ const About = ({ darkMode, aboutRef }) => {
                   d="M8.115 22.814a2.109 2.109 0 0 1-.474-.361c-1.327-1.333-2.66-2.66-3.984-3.997-1.989-2.008-2.302-4.937-.786-7.32a6 6 0 0 1 .839-1.004L13.333.489c.625-.626 1.498-.652 2.079-.067.56.563.527 1.455-.078 2.066-.769.776-1.539 1.55-2.309 2.325-.041.122-.14.2-.225.287-.863.876-1.75 1.729-2.601 2.618-.111.116-.262.186-.372.305-1.423 1.423-2.863 2.83-4.266 4.272-1.135 1.167-1.097 2.938.068 4.127 1.308 1.336 2.639 2.65 3.961 3.974.067.067.136.132.204.198.468.303.474 1.25.183 1.671-.321.465-.74.75-1.333.728-.199-.006-.363-.086-.529-.179z"
                 ></path>
               </svg>
-              <a
-                href="https://www.linkedin.com/in/rushichokkakula2005/"
-                target="_blank"
-              >
+              <a href="https://leetcode.com/u/rushi_369/" target="_blank">
                 rushi_369
               </a>
             </div>

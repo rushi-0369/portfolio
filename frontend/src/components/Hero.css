@@ -40,7 +40,7 @@
   font-weight: 300;
   margin-bottom: 1rem;
   opacity: 0.8;
-    font-family: "Geist", sans-serif;
+  font-family: "Geist", sans-serif;
 }
 
 .cursor-role {
@@ -49,8 +49,15 @@
 }
 
 @keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
 .terminal {
@@ -65,13 +72,12 @@
 
 .hero-section.dark .terminal {
   background: #000;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 
 .hero-section.light .terminal {
   background: #f5f5f5;
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .terminal-header {
@@ -92,9 +98,15 @@
   border-radius: 50%;
 }
 
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
+.red {
+  background: #ff5f56;
+}
+.yellow {
+  background: #ffbd2e;
+}
+.green {
+  background: #27c93f;
+}
 
 .terminal-title {
   opacity: 0.4;
@@ -113,11 +125,12 @@
   animation: blink 1s infinite;
 }
 
-.down{
-    margin-top: 4rem;
+.down {
+  margin-top: 4rem;
 }
 
-
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }

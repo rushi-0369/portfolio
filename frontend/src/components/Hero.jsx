@@ -13,8 +13,8 @@ const Hero = ({ darkMode }) => {
       } else {
         setDisplayText(currentText.substring(0, displayText.length - 1));
       }
-      if(!isDeleting && displayText === currentText){
-        setTimeout(()=>setIsDeleting(true), 1200);
+      if (!isDeleting && displayText === currentText) {
+        setTimeout(() => setIsDeleting(true), 1200);
       }
       if (isDeleting && displayText === "") {
         setIsDeleting(false);

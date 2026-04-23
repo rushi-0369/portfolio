@@ -1,5 +1,5 @@
-.navbar *{
-    font-family: "Geist Mono", monospace;
+.navbar * {
+  font-family: "Geist Mono", monospace;
 }
 .navbar {
   position: fixed;
@@ -33,7 +33,6 @@
   font-weight: bold;
   cursor: pointer;
 }
-
 
 .nav-items {
   cursor: pointer;

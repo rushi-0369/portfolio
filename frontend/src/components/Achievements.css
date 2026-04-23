@@ -86,9 +86,9 @@
   color: #ffffff;
 }
 
-.achievements-section.dark .achievement-link:hover{
-    background-color: #ffffff;
-    color: #000000;
+.achievements-section.dark .achievement-link:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .achievements-section.light .achievement-link {
@@ -96,9 +96,9 @@
   color: #000000;
 }
 
-.achievements-section.light .achievement-link:hover{
-    background-color: #000000;
-    color: #ffffff;
+.achievements-section.light .achievement-link:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .view-code {

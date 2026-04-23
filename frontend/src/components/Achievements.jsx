@@ -1,13 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const Achievements = ({ darkMode,
-  achievementsRef }) => {
+const Achievements = ({ darkMode, achievementsRef }) => {
   return (
     <section
       ref={achievementsRef}
       className={`achievements-section ${darkMode ? "dark" : "light"}`}
     >
-      <div className='section-container'>
+      <div className="section-container">
         <div className="section-header">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,55 +27,54 @@ const Achievements = ({ darkMode,
           <h1 className="section-title">Achievements</h1>
         </div>
 
-        <div className='achievement-grid'>
-          <div className='achievement-card'>
-            <span className='achievement-tag'>📄 Publication</span>
-            <h3 className='achievement-title'>
+        <div className="achievement-grid">
+          <div className="achievement-card">
+            <span className="achievement-tag">📄 Publication</span>
+            <h3 className="achievement-title">
               Enhance Your Productivity Through AI - Sahayak
             </h3>
-            <p className='achievement-meta'>
-              IEEE ICCPCT 2025
-            </p>
-            <ul className='achievement-points'>
-              <li>Developed an AI-driven system for personalized productivity recommendations</li>
+            <p className="achievement-meta">IEEE ICCPCT 2025</p>
+            <ul className="achievement-points">
+              <li>
+                Developed an AI-driven system for personalized productivity
+                recommendations
+              </li>
               <li>Analyzed user behavior using intelligence models</li>
             </ul>
-<a
-                href="#"
-                target="_blank"
-                className="achievement-link"
+            <a
+              href="https://xplorestaging.ieee.org/document/11176553"
+              target="_blank"
+              className="achievement-link"
+            >
+              <span className="view-code">View Publications</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-external-link w-4 h-4"
               >
-                <span className="view-code">View Publications</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-external-link w-4 h-4"
-                >
-                  <path d="M15 3h6v6"></path>
-                  <path d="M10 14 21 3"></path>
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                </svg>
-              </a>
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14 21 3"></path>
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              </svg>
+            </a>
           </div>
-          <div className='achievement-card'>
-            <span className='achievement-tag'>💻 Coding</span>
-            <h3 className='achievement-title'>
-              Data Structures & Algorithms
-            </h3>
-            <ul className='achievement-points'>
+          <div className="achievement-card">
+            <span className="achievement-tag">💻 Coding</span>
+            <h3 className="achievement-title">Data Structures & Algorithms</h3>
+            <ul className="achievement-points">
               <li>Solved 150+ problems on LeetCode</li>
               <li>Practiced using Striver A2Z Sheet</li>
               <li>Learned from Apna College & CodeStoryWithMIK</li>
             </ul>
             <a
-              href="#"
+              href="https://leetcode.com/u/rushi_369/"
               target="_blank"
               className="achievement-link"
             >
@@ -99,12 +97,10 @@ const Achievements = ({ darkMode,
               </svg>
             </a>
           </div>
-          <div className='achievement-card'>
-            <span className='achievement-tag'>🚀 Hackathons</span>
-            <h3 className='achievement-title'>
-              Hackathon Participation
-            </h3>
-            <ul className='achievement-points'>
+          <div className="achievement-card">
+            <span className="achievement-tag">🚀 Hackathons</span>
+            <h3 className="achievement-title">Hackathon Participation</h3>
+            <ul className="achievement-points">
               <li>Participated in multiple hackathons</li>
               <li>Built full-stack applications under time constraints</li>
               <li>Collaborated in team environments</li>
@@ -113,7 +109,7 @@ const Achievements = ({ darkMode,
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Achievements
+export default Achievements;

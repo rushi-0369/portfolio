@@ -74,9 +74,9 @@
   color: #ffffff;
 }
 
-.certifications-section.dark .certification-link:hover{
-    background-color: #ffffff;
-    color: #000000;
+.certifications-section.dark .certification-link:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .certifications-section.light .certification-link {
@@ -84,9 +84,9 @@
   color: #000000;
 }
 
-.certifications-section.light .certification-link:hover{
-    background-color: #000000;
-    color: #ffffff;
+.certifications-section.light .certification-link:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .view-code {
