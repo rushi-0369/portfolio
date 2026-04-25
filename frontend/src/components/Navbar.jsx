@@ -15,7 +15,7 @@ export default function Navbar({
 
   return (
     <nav className={`navbar ${darkMode ? "dark" : "light"}`}>
-      <div className="brand">&lt;/&gt; Rushi</div>
+      <a href="#" className="brand">&lt;/&gt; Rushi</a>
 
       <ul className="nav-items">
         <li onClick={scrollToAbout}>About</li>
