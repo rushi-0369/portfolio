@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import React, { useRef, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
@@ -36,6 +37,7 @@ const App = () => {
 
   return (
     <div>
+      <Analytics />
       <Navbar
         darkMode={darkMode}
         setDarkMode={setDarkMode}
