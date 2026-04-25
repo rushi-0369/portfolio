@@ -12,15 +12,15 @@
 
 .section-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
 }
 
 .section-card {
   border: 1px solid;
-  border-radius: 12px;
-  padding: 18px 16px;
-  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 28px 18px;
+  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 
@@ -52,12 +52,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
 .section-icon {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   transition: color 0.3s ease;
 }
 
@@ -100,7 +101,7 @@
 }
 
 .section-container {
-  max-width: 900px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
