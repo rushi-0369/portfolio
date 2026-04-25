@@ -63,7 +63,7 @@ const App = () => {
       />
 
       <Contact darkMode={darkMode} contactRef={contactRef} />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
