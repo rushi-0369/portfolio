@@ -10,6 +10,8 @@ const Hero = ({ darkMode }) => {
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const terminalText = "Let's build something amazing together!";
+  const [terminalDisplay, setTerminalDisplay] = useState("");
   useEffect(() => {
     const currentText = texts[textIndex];
     let speed = isDeleting ? 50 : 100;
@@ -29,6 +31,22 @@ const Hero = ({ darkMode }) => {
     }, speed);
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, textIndex]);
+  useEffect(() => {
+    let index = 0;
+
+    const interval = setInterval(() => {
+      setTerminalDisplay((prev) => {
+        if (index >= terminalText.length) {
+          clearInterval(interval); // stop typing
+          return prev;
+        }
+        const nextText = prev + terminalText[index];
+        index++;
+        return nextText;
+      });
+    }, 50);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
       <section className={`hero-section ${darkMode ? "dark" : "light"}`}>
@@ -58,7 +76,7 @@ const Hero = ({ darkMode }) => {
             <div className="terminal-body">
               <span className="prompt">$</span>
               <span>
-                Let's build something amazing together!
+                {terminalDisplay}
                 <span className="cursor">|</span>
               </span>
             </div>
