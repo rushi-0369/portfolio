@@ -11,6 +11,7 @@ import "./components/Projects.css";
 import "./components/Achievements.css";
 import "./components/Certifications.css";
 import "./components/Contact.css";
+import "./components/Footer.css";
 
 import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
@@ -18,6 +19,7 @@ import Projects from "./components/Projects.jsx";
 import Achievements from "./components/Achievements.jsx";
 import Contact from "./components/Contact.jsx";
 import Certifications from "./components/Certifications.jsx";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -61,6 +63,7 @@ const App = () => {
       />
 
       <Contact darkMode={darkMode} contactRef={contactRef} />
+      <Footer/>
     </div>
   );
 };
