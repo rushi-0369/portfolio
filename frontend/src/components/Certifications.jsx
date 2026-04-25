@@ -88,7 +88,7 @@ const Certifications = ({ darkMode, certificationsRef }) => {
             <h3 className="certification-title">HTML, CSS, JavaScript</h3>
             <p className="certification-provider">Infosys Springboard</p>
             <a
-              href="https://drive.google.com/file/d/1-2su8eU0BFxlgtZQ792GIlW-FKktqQm_/view?usp=sharing"
+              href="https://drive.google.com/file/d/1cdhvo4to86LY8sdNMNqrPi09eIgDy1Uv/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="certification-link"
