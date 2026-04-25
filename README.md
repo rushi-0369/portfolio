@@ -7,7 +7,7 @@ The website showcases my projects, skills, and provides a contact form where vis
 
 ## 🚀 Live Demo
 
-.
+https://rushicodes.vercel.app/
 
 ---
 
@@ -18,7 +18,7 @@ The website showcases my projects, skills, and provides a contact form where vis
 * Projects showcase section
 * Skills section
 * Contact form with backend integration
-* Social media links (GitHub, Instagram, Discord, Snapchat)
+* Social media links (GitHub, LinkedIn, Gmail, Phone)
 * Message storage through backend API
 
 ---
@@ -47,17 +47,15 @@ The website showcases my projects, skills, and provides a contact form where vis
 
 ```
 portfolio
- ├── client
+ ├── frontend
  │   ├── src
- │   │   ├── components
- │   │   ├── pages
  │   │   ├── assets
+ │   │   ├── components
+ │   │   ├── context
  │   │   └── App.jsx
  │   └── package.json
  │
- ├── server
- │   ├── routes
- │   │   └── contactRoutes.js
+ ├── backend
  │   ├── models
  │   │   └── Contact.js
  │   ├── server.js
