@@ -9,15 +9,22 @@ const Contact = require("./models/Contact");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST"],
+  }),
+);
 app.use(express.json());
 
 // DB Connection
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Atlas Connected ✅"))
-  .catch((err) => console.log(err));
-
+  .catch((err) => {
+    console.error("MongoDB error:", err);
+    process.exit(1);
+  });
 // Mail Setup
 const transporter = nodemailer.createTransport({
   service: "gmail",
