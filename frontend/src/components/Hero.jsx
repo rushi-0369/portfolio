@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-const texts = ["Problem Solver", "Frontend Developer"];
+const texts = [
+  "Full Stack Developer",
+  "Problem Solver",
+  "DSA Enthusiast",
+  "React Developer",
+  "Backend Learner",
+];
 const Hero = ({ darkMode }) => {
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
