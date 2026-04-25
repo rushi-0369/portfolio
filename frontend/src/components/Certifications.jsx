@@ -144,7 +144,7 @@ const Certifications = ({ darkMode, certificationsRef }) => {
             <h3 className="certification-title">Badges</h3>
             <p className="certification-provider">Leetcode</p>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1MhBk4T5NTRoX9xEmLuUz88zZc6APBiFV/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="certification-link"
