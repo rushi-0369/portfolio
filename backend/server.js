@@ -39,36 +39,30 @@ const transporter = nodemailer.createTransport({
 
 // Route
 app.post("/contact", async (req, res) => {
-  const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res
-      .status(400)
-      .json({ success: false, message: "All fields required" });
-  }
-
   try {
-    // Save to DB
-    const newContact = new Contact({ name, email, message });
-    await newContact.save();
+    const { name, email, message } = req.body;
 
-    // Send Email
+    if (!name || !email || !message) {
+      return res.status(400).json({ message: "All fields required" });
+    }
+
+    await new Contact({ name, email, message }).save();
+
     await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-      replyTo: email,
+      from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       subject: "New Contact Message",
-      text: `
-        Name: ${name}
-        Email: ${email}
-        Message: ${message}
-      `,
+      text: `${name} (${email}): ${message}`,
     });
 
     res.status(200).json({ success: true });
+
   } catch (error) {
-    res.status(500).json({ success: false, message: "Server error" });
     console.error(error);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+    });
   }
 });
 
