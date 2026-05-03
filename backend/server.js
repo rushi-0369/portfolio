@@ -8,16 +8,21 @@ const Contact = require("./models/Contact");
 
 const app = express();
 
-// Middleware
+/* ================== CORS ================== */
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: process.env.FRONTEND_URL?.replace(/\/$/, ""), // removes trailing slash if any
     methods: ["GET", "POST"],
-  }),
+    credentials: true,
+  })
 );
+
 app.use(express.json());
 
-// DB Connection
+/* ================== DEBUG ================== */
+console.log("FRONTEND_URL:", process.env.FRONTEND_URL);
+
+/* ================== DB ================== */
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Atlas Connected ✅"))
@@ -25,40 +30,56 @@ mongoose
     console.error("MongoDB error:", err);
     process.exit(1);
   });
-// Mail Setup
+
+/* ================== MAIL SETUP ================== */
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",   // 🔥 better than service: "gmail"
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-  tls: {
-    rejectUnauthorized: false,
+    pass: process.env.EMAIL_PASS, // MUST be App Password
   },
 });
 
-// Route
+/* Optional: verify transporter (helps debugging) */
+transporter.verify((error, success) => {
+  if (error) {
+    console.error("Mail server error:", error);
+  } else {
+    console.log("Mail server ready ✅");
+  }
+});
+
+/* ================== ROUTE ================== */
 app.post("/contact", async (req, res) => {
   try {
+    console.log("Incoming request:", req.body);
+
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
       return res.status(400).json({ message: "All fields required" });
     }
 
+    // Save to DB
     await new Contact({ name, email, message }).save();
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+    // Send Email
+    const info = await transporter.sendMail({
+      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       subject: "New Contact Message",
       text: `${name} (${email}): ${message}`,
     });
 
+    console.log("Email sent:", info.response);
+
     res.status(200).json({ success: true });
 
   } catch (error) {
-    console.error(error);
+    console.error("ERROR:", error);
+
     res.status(500).json({
       success: false,
       error: error.message,
@@ -66,11 +87,12 @@ app.post("/contact", async (req, res) => {
   }
 });
 
+/* ================== TEST ROUTE ================== */
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-// Start Server
+/* ================== SERVER ================== */
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
