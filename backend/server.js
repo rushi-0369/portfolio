@@ -11,11 +11,17 @@ const app = express();
 /* ================== CORS ================== */
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL?.replace(/\/$/, ""), // removes trailing slash if any
+    origin: [
+      "http://localhost:5173",
+      process.env.FRONTEND_URL,
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   })
 );
+
+console.log("FRONTEND_URL =", process.env.FRONTEND_URL);
+console.log("EMAIL_USER =", process.env.EMAIL_USER);
 
 app.use(express.json());
 
@@ -33,14 +39,13 @@ mongoose
 
 /* ================== MAIL SETUP ================== */
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",   // 🔥 better than service: "gmail"
-  port: 465,
-  secure: true,
+  service: "gmail",
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, // MUST be App Password
+    pass: process.env.EMAIL_PASS,
   },
 });
+
 
 /* Optional: verify transporter (helps debugging) */
 transporter.verify((error, success) => {
