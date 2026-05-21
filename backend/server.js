@@ -1,12 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 const cors = require("cors");
 require("dotenv").config();
 
 const Contact = require("./models/Contact");
 
 const app = express();
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 /* ================== CORS ================== */
 app.use(
@@ -20,13 +22,10 @@ app.use(
   })
 );
 
-console.log("FRONTEND_URL =", process.env.FRONTEND_URL);
-console.log("EMAIL_USER =", process.env.EMAIL_USER);
-
 app.use(express.json());
 
 /* ================== DEBUG ================== */
-console.log("FRONTEND_URL:", process.env.FRONTEND_URL);
+console.log("FRONTEND_URL =", process.env.FRONTEND_URL);
 
 /* ================== DB ================== */
 mongoose
@@ -37,27 +36,6 @@ mongoose
     process.exit(1);
   });
 
-/* ================== MAIL SETUP ================== */
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-  family: 4,
-});
-
-
-
-/* Optional: verify transporter (helps debugging) */
-transporter.verify((error, success) => {
-  if (error) {
-    console.error("Mail server error:", error);
-  } else {
-    console.log("Mail server ready ✅");
-  }
-});
-
 /* ================== ROUTE ================== */
 app.post("/contact", async (req, res) => {
   try {
@@ -66,23 +44,38 @@ app.post("/contact", async (req, res) => {
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
-      return res.status(400).json({ message: "All fields required" });
+      return res.status(400).json({
+        message: "All fields required",
+      });
     }
 
     // Save to DB
-    await new Contact({ name, email, message }).save();
+    await new Contact({
+      name,
+      email,
+      message,
+    }).save();
 
-    // Send Email
-    const info = await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+    // Send Email using Resend
+    await resend.emails.send({
+      from: "onboarding@resend.dev",
       to: process.env.EMAIL_USER,
       subject: "New Contact Message",
-      text: `${name} (${email}): ${message}`,
+      text: `
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+`,
     });
 
-    console.log("Email sent:", info.response);
+    console.log("Email sent ✅");
 
-    res.status(200).json({ success: true });
+    res.status(200).json({
+      success: true,
+    });
 
   } catch (error) {
     console.error("ERROR:", error);
@@ -91,6 +84,7 @@ app.post("/contact", async (req, res) => {
       success: false,
       error: error.message,
     });
+
   }
 });
 
